@@ -9,3 +9,6 @@ sudo echo "cluster.name: graylog" >> /etc/elasticsearch/elasticsearch.yml
 sudo systemctl daemon-reload
 sudo systemctl enable elasticsearch.service
 sudo systemctl restart elasticsearch.service
+wget https://packages.graylog2.org/repo/packages/graylog-2.2-repository_latest.deb
+sudo dpkg -i graylog-2.2-repository_latest.deb
+sudo apt-get update && sudo apt-get install graylog-server
